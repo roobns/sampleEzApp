@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Geolocalizacion</ion-title>
+
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <h1>Escanear</h1>
+  
+    <ion-button color="primary" (click)="scanCode()">
+      Codigo de Escaneo
+    </ion-button>
+  
+    <div *ngIf="scannedData">
+      <p>
+       Texto Escaneado : <b>{{ scannedData["text"] }}</b>
+      </p>
+      <p>
+        Fkormato del código : <b>{{ scannedData["format"] }}</b>
+      </p>
+    </div>
+  
+    <h1>Introduce un vslor para crear un codigo QR</h1>
+    <ion-input placeholder="Enter Input" [(ngModel)]="encodedData"></ion-input>
+  
+    <ion-button color="success" (click)="generateBar()">
+      Crear QR
+    </ion-button>
+  </ion-content>
+</ion-content>
