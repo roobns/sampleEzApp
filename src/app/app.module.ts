@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { BatteryStatus } from '@ionic-native/battery-status/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     Geolocation,
     NativeGeocoder,
     BarcodeScanner,
+    BatteryStatus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

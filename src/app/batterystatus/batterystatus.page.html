@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>batterystatus</ion-title>
+    <ion-title>Battery Status</ion-title>
+
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-label>Nivel de Bateria</ion-label>
+    <ion-badge color="primary">{{nivelBat}}</ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label>Conectado a la corriente</ion-label>
+    <ion-badge color="primary">{{enchufeBat ? 'Si':'No'}}</ion-badge>
+  </ion-item>
+  
 </ion-content>
